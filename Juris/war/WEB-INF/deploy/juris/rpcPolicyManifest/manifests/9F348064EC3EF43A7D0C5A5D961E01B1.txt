@@ -1,0 +1,2 @@
+serviceClass: br.com.devguy.juris.client.GreetingService
+path: 45874D613534182CD0BDD80C93FD3658.gwt.rpc
