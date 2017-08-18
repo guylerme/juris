@@ -3,6 +3,8 @@
  */
 package br.com.devguy.juris.domain;
 
+import java.math.BigDecimal;
+
 import br.com.devguy.juris.exceptions.InscricaoEstadualInvalidaException;
 import br.com.devguy.juris.exceptions.NumeroDocumentoInvalidoException;
 
@@ -31,7 +33,7 @@ public class InscricaoEstadual extends DocumentoCorporativo {
 	}
 
 	private boolean validaIE(double inscricaoEstadual, String siglaUf) {
-		String strIE = "" + inscricaoEstadual;
+		String strIE = "" + BigDecimal.valueOf(inscricaoEstadual).toPlainString();
 		siglaUf = siglaUf.toUpperCase();
 		if (siglaUf.equals("AC")) {
 			return validaIEAcre(strIE);

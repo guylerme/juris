@@ -3,6 +3,7 @@
  */
 package br.com.devguy.juris.domain;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.InputMismatchException;
 
@@ -29,7 +30,7 @@ public class CadastroPessoaJuridica extends DocumentoCorporativo {
 	 */
 	@Override
 	public void setNumeroDocumento(double numeroDocumento) throws NumeroDocumentoInvalidoException {
-		if (this.isCNPJ("" + numeroDocumento))
+		if (this.isCNPJ("" + BigDecimal.valueOf(numeroDocumento).toPlainString()))
 			super.setNumeroDocumento(numeroDocumento);
 		else
 			throw new CNPJInvalidoException();

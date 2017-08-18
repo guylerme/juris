@@ -3,6 +3,7 @@
  */
 package br.com.devguy.juris.domain;
 
+import java.math.BigDecimal;
 import java.util.InputMismatchException;
 
 import br.com.devguy.juris.exceptions.CPFInvalidoException;
@@ -22,7 +23,7 @@ public class CadastroPessoaFisica extends DocumentoPessoal {
 	 */
 	@Override
 	public void setNumeroDocumento(double numeroDocumento) throws NumeroDocumentoInvalidoException {
-		if (this.isCPF("" + numeroDocumento))
+		if (this.isCPF("" + BigDecimal.valueOf(numeroDocumento).toPlainString()))
 			super.setNumeroDocumento(numeroDocumento);
 		else
 			throw new CPFInvalidoException();

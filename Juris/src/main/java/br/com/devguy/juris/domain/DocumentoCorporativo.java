@@ -21,7 +21,7 @@ public class DocumentoCorporativo implements IDocumento {
 	public void setNumeroDocumento(double numeroDocumento) throws NumeroDocumentoInvalidoException {
 		DecimalFormat df = new DecimalFormat("#");
 		double numero = Double.valueOf(df.format(numeroDocumento));
-		if (numeroDocumento / numero == 0)
+		if (numeroDocumento % numero == 0)
 			this.numeroDocumento = numeroDocumento;
 		else
 			throw new NumeroDocumentoInvalidoException();
