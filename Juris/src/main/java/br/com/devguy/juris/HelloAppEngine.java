@@ -8,7 +8,12 @@ import javax.servlet.http.HttpServletResponse;
 
 public class HelloAppEngine extends HttpServlet {
 
-  public void doGet(HttpServletRequest request, HttpServletResponse response) 
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+public void doGet(HttpServletRequest request, HttpServletResponse response) 
       throws IOException {
       
     response.setContentType("text/plain");

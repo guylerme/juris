@@ -57,6 +57,7 @@ public class PessoaTest {
 		assertEquals(nome, p.getNome());
 	}
 
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testGetDataNascimento() {
 		System.out.println("testing getDataNascimento on Pessoa");
@@ -73,6 +74,7 @@ public class PessoaTest {
 		assertEquals(data, result);
 	}
 
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testSetDataNascimento() {
 		System.out.println("testing getDataNascimento on Pessoa");
